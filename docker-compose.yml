@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  app:
+    build: .
+    image: tikhoplav/go
+    volumes:
+      - ./app:/app
+      - ./pkg:/go/pkg
+    ports:
+      - 8080:8080
+    network_mode: host
